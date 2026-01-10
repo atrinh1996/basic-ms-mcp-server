@@ -9,7 +9,7 @@ CLIENT_ID = os.getenv("TEAMS_CLIENT_ID")
 CLIENT_SECRET = os.getenv("TEAMS_CLIENT_SECRET")
 # TENANT_ID = "common" # personal accounts (might be failing)
 TENANT_ID = "consumers" # personal MS acocunts
-TOKEN_CACHE_FILE = Path.home()/".teams_mcp_token_cache.json"
+TOKEN_CACHE_FILE = Path.home()/".ms_mcp_token_cache.json"
 
 # print(CLIENT_ID)
 # print(TOKEN_CACHE_FILE)
@@ -38,7 +38,6 @@ class Tools:
 
     user_info = "user_info"
     mail_read = "mail_read"
-    mail_read_by_id = "mail_read_id"
     mail_send = "mail_send"
 
 # important endpoints

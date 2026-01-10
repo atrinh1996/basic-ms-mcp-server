@@ -55,6 +55,7 @@ async def call_tool_handler(name: str, arguments: dict) -> list[TextContent]:
             return [TextContent(type="text", text=result)]
         
         elif name == tool.mail_send:
+            # REFERENCE: https://learn.microsoft.com/en-us/graph/api/user-sendmail?view=graph-rest-1.0&tabs=http
             subject = arguments["subject"]
             content = arguments["content"]
             recipients = arguments["recipients"] # list of email addresses 

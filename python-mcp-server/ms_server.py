@@ -1,5 +1,4 @@
-import asyncio, json, os, msal, httpx
-from pathlib import Path 
+import asyncio
 from mcp.server import Server
 from mcp.server.stdio import stdio_server
 from mcp.types import Tool, TextContent
@@ -7,17 +6,17 @@ import config
 from tools.list import list_tools_handler
 from tools.call import call_tool_handler
 
-# from mcp.server import Server
-# from mcp.server.fastmcp import FastMCP
 
 # create an MCP server
 app = Server("teams-mcp-server")
-# mcp = FastMCP("teams-mcp-server")
 
+
+# list tools
 @app.list_tools()
 async def list_tools() -> list[Tool]:
     return await list_tools_handler()
 
+# call tools handler
 @app.call_tool()
 async def call_tool(name: str, arguments: dict) -> list[TextContent]:
     return await call_tool_handler(name, arguments)

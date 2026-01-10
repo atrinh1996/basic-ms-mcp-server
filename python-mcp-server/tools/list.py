@@ -19,7 +19,7 @@ async def list_tools_handler() -> list[Tool]:
             inputSchema={
                 "type": "object",
                 "properties": {
-                    "label_id": { "type": "string", "description": "The ID of the mailbox to read from" },
+                    "label_id": { "type": "string", "description": "The ID of the mailbox to read from, eg. \"Inbox\"" },
                 },
                 "required": []
             }
